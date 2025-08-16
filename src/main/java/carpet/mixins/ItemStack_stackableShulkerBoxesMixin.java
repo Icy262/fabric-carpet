@@ -20,7 +20,6 @@ public class ItemStack_stackableShulkerBoxesMixin
         if (CarpetSettings.shulkerBoxStackSize > 1
                 && ((ItemStack)((Object)this)).getItem() instanceof BlockItem blockItem
                 && blockItem.getBlock() instanceof ShulkerBoxBlock
-                && ((ItemStack) ((Object) this)).getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).stream().findAny().isEmpty()
         ) {
             cir.setReturnValue(CarpetSettings.shulkerBoxStackSize);
         }
